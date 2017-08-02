@@ -40,15 +40,15 @@ const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ESC,      F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12,   PSCR,SLCK,BRK,
     GRV, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSPC,  INS, HOME,PGUP,    NLCK,PSLS,PAST,PMNS,
     TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS,  DEL, END, PGDN,    P7,  P8,  P9,
-    F18, A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,     FN5,                      P4,  P5,  P6,  PPLS,
+    FN7, A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,     FN5,                      P4,  P5,  P6,  PPLS,
     FN2, Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,          FN3,        UP,           P1,  P2,  P3,
-    LCTL,LALT,FN1,           FN0,                     RGUI,RALT,RCTL,FN4,   LEFT,DOWN,RGHT,    P0,       PDOT,PENT
+    FN6, LALT,FN1,           FN0,                     RGUI,RALT,FN6, FN4,   LEFT,DOWN,RGHT,    P0,       PDOT,PENT
     ),
 
     [1] = KEYMAP(
     TRNS,     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  TRNS,TRNS,TRNS,
     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  TRNS,TRNS,TRNS,    TRNS,TRNS,TRNS,TRNS,
-    TRNS,TRNS,TRNS,ESC, TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  TRNS,TRNS,TRNS,    TRNS,TRNS,TRNS,
+    TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,  TRNS,TRNS,TRNS,    TRNS,TRNS,TRNS,
     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,LEFT,DOWN,UP,  RGHT,TRNS,TRNS,     TRNS,                     TRNS,TRNS,TRNS,TRNS,
     TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,SPC, TRNS,TRNS,TRNS,TRNS,          TRNS,       TRNS,         TRNS,TRNS,TRNS,
     TRNS,TRNS,TRNS,               TRNS,               TRNS,TRNS,TRNS,TRNS,  TRNS,TRNS,TRNS,    TRNS,     TRNS,TRNS
@@ -70,6 +70,7 @@ const action_t fn_actions[] PROGMEM = {
     [2] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_LBRC),
     [3] = ACTION_MODS_TAP_KEY(MOD_RSFT, KC_RBRC),
     [4] = ACTION_LAYER_MOMENTARY(2),
-    [5] = ACTION_LAYER_TAP_KEY(2,KC_ENT)
-
+    [5] = ACTION_LAYER_TAP_KEY(2,KC_ENT),
+    [6] = ACTION_KEY(MOD_LGUI | MOD_LSFT | MOD_LCTL | MOD_LALT),
+    [7] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_BSPC)
 };
